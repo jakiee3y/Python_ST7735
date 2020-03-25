@@ -1,3 +1,11 @@
+I found some LCDs with st7735 not display colors correctly.
+But we can fix this without changing the code in lib path.
+
+If red and blue exchanged, add disp.command([0x36, 0x68]) after disp.begin()
+If black and white reversed, add disp.command(0x21) after disp.begin()
+
+But if you want shorter time in initializing, the lib code musted be modified.
+
 Python ST7735
 =======================
 
